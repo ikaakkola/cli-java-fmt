@@ -22,6 +22,7 @@ Format Java sources with 'google-java-fmt'
       files...      one or more files or directories to format
   -h, --help        Show this help message and exit.
   -r, --recursive   Recurse into directories (default: true)
+  -i, --imports     Format imports
   -s, --split       Split long strings into multiple lines (default: true)
   -V, --version     Print version information and exit.
 ```

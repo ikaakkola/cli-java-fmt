@@ -52,6 +52,12 @@ public class JavaFmtApp implements Runnable {
 
   @Option(
       required = false,
+      names = {"-i", "--imports"},
+      description = "Format imports")
+  private boolean formatImports;
+
+  @Option(
+      required = false,
       names = {"-v", "--verbose"},
       description = "Verbose output (default: false)",
       defaultValue = "false")
@@ -136,7 +142,10 @@ public class JavaFmtApp implements Runnable {
 
   private String format(String source) throws FormatterException {
     Formatter formatter = new Formatter();
-    String formatted = formatter.formatSource(source);
+    String formatted =
+        formatImports
+            ? formatter.formatSourceAndFixImports(source)
+            : formatter.formatSource(source);
     if (reflowStrings) {
       formatted = StringWrapper.wrap(formatted, formatter);
     }
