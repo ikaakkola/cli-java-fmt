@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.randomcodemonkey.cli</groupId>
   <artifactId>cli-java-fmt</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
   <name>cli-java-fmt</name>
   <description>Run google-java-fmt as a cli application</description>
@@ -22,7 +22,7 @@
     <dependency>
       <groupId>com.google.googlejavaformat</groupId>
       <artifactId>google-java-format</artifactId>
-      <version>1.24.0</version>
+      <version>1.26.0</version>
     </dependency>
     <dependency>
       <groupId>info.picocli</groupId>
